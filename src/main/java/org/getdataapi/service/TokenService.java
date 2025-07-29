@@ -1,8 +1,8 @@
 package org.getdataapi.service;
 
 import lombok.RequiredArgsConstructor;
-import org.getdataapi.config.GetTocken;
-import org.springframework.beans.factory.annotation.Value;
+import org.getdataapi.dto.TokenResponseDto;
+import org.getdataapi.service.api.GetTocken;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,11 +10,13 @@ import org.springframework.stereotype.Service;
 public class TokenService {
     private final GetTocken getTocken;
 
+    public TokenResponseDto obtainToken() {
+        String formBody = String.format("grant_type=%s&client_id=%s&client_secret=%s",
+                "client_credentials",
+                "86cb7eb8",
+                "e0ca69dc260b12536cd8464a7195607f");
 
-    @Value("${token.client.id}")
-    private String clientId;
-
-    @Value("${token.client.secret}")
-    private String clientSecret;
-
+        TokenResponseDto dto =  getTocken.getToken(formBody);
+      return dto;
+    }
 }

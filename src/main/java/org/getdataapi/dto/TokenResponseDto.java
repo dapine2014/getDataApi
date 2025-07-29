@@ -1,13 +1,15 @@
 package org.getdataapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Builder
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
 public class TokenResponseDto {
     @JsonProperty("access_token")
     private String accessToken;
