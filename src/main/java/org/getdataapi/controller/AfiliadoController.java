@@ -2,6 +2,7 @@ package org.getdataapi.controller;
 
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.getdataapi.dto.input.InputAfiliadoDto;
 import org.getdataapi.service.AfiliacionesService;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/data")
 @RequiredArgsConstructor
+@Slf4j
 public class AfiliadoController {
 
     private final AfiliacionesService afiliacionesService;

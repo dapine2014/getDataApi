@@ -1,6 +1,6 @@
 package org.getdataapi.service.api;
 
-import org.getdataapi.dto.AfiliacionDto;
+import org.getdataapi.dto.response.ResponseAfiliado;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -12,9 +12,9 @@ import java.util.List;
 public interface IAfiliaciones {
 
     @GetMapping("/consultaAfiliadoEmpresa")
-    List<AfiliacionDto> consultarAfiliado( @RequestHeader("Authorization") String token,
-                                           @RequestParam("idTipoDoc") String tipoDocumento,
-                                           @RequestParam("idAfiliado") String numeroDocumento
+    List<ResponseAfiliado> consultarAfiliado(@RequestHeader("Authorization") String token,
+                                             @RequestParam("idTipoDoc") String tipoDocumento,
+                                             @RequestParam("idAfiliado") String numeroDocumento
     );
 
 }

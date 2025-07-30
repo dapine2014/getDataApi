@@ -17,10 +17,8 @@ public class AfiliacionDto {
 
     private String tipoDoc;
     private String idPersona;
-
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime fechaNacimiento;
-
     private String departamento;
     private String municipio;
     private Integer idDepartamento;
@@ -36,13 +34,10 @@ public class AfiliacionDto {
     private String sexo;
     private String estadoRl;
     private String nomVinLaboral;
-
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime fechaInicioVinculacion;
-
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime fechaFinVinculacion;
-
     private Integer afp;
     private String nombreAfp;
     private String eps;
@@ -64,10 +59,8 @@ public class AfiliacionDto {
     private String indZona;
     private Long idActEconomica;
     private String nomActEco;
-
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime fechaAfiliacionEfectiva;
-
     private String estadoEmpresa;
     private Integer idCentroTrabajo;
     private Integer idSucursal;
